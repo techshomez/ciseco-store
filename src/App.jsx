@@ -1,7 +1,13 @@
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/common/navbar";
+import HomePage from "./pages/home";
 function App() {
   return (
     <div className="">
-      <h2>CISECO STORE</h2>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
