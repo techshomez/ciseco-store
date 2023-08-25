@@ -13,5 +13,7 @@ a {
   --white: #fff;
   --banner-bg: #e3ffe6;
   --link-hover: #f1f5f9;
-  --link-color: #0f172a;
+  --link-color: #334155;
+  --cart-num-color: #0ea5e9;
+  --mobile-bg: #f9f9f9;
 }
