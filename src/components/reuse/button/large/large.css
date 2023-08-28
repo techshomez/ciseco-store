@@ -1,0 +1,7 @@
+button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  color: var(--white);
+  background-color: var(--large-button-bg);
+}
