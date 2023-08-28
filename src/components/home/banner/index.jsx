@@ -5,6 +5,8 @@ import LargeButton from "../../reuse/button/large";
 
 import bg1 from "/images/banner/bg1.svg";
 import hero1 from "/images/banner/hero1.webp";
+import hero2 from "/images/banner/hero2.webp";
+import hero3 from "/images/banner/hero3.webp";
 
 const Banner = () => {
   return (
@@ -29,6 +31,26 @@ const Banner = () => {
           </div>
           <div className="banner__right">
             <img src={hero1} alt="" />
+          </div>
+        </div>
+        <div className="container" style={{ backgroundImage: `url(${bg1})` }}>
+          <div className="banner__left">
+            <h4>In this season, find the best</h4>
+            <h1>Exclusive collection for everyone</h1>
+            <LargeButton value="Explore Now" />
+          </div>
+          <div className="banner__right">
+            <img src={hero2} alt="" />
+          </div>
+        </div>
+        <div className="container" style={{ backgroundImage: `url(${bg1})` }}>
+          <div className="banner__left">
+            <h4>In this season, find the best</h4>
+            <h1>Exclusive collection for everyone</h1>
+            <LargeButton value="Explore Now" />
+          </div>
+          <div className="banner__right">
+            <img src={hero3} alt="" />
           </div>
         </div>
       </Carousel>
