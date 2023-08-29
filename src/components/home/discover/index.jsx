@@ -1,6 +1,39 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./discover.css";
+import DefaultButton from "../../reuse/button/large/default";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+
+const discover_list = [
+  {
+    id: 1,
+    heading: "Explore new arrival",
+    title: "Shop the latest from top brands",
+    image: "/images/discover/2.png",
+    klass: "yellow-bg",
+  },
+  {
+    id: 2,
+    heading: "Digital gift cards",
+    title: "Give the gift of choice",
+    image: "/images/discover/3.png",
+    klass: "deep-yellow-bg",
+  },
+  {
+    id: 3,
+    heading: "Sale collection",
+    title: "Up to 80% off retail",
+    image: "/images/discover/1.png",
+    klass: "sky-bg",
+  },
+  {
+    id: 4,
+    heading: "Sale collection",
+    title: "Up to 80% off retail",
+    image: "/images/discover/4.png",
+    klass: "sky-bg",
+  },
+];
 
 const Discover = () => {
   const responsive = {
@@ -22,57 +55,57 @@ const Discover = () => {
       items: 1,
     },
   };
+
+  const CustomRight = ({ onClick }) => (
+    <button className="arrow right" onClick={onClick}>
+      <FiChevronRight style={{ fontSize: "50px" }} />
+    </button>
+  );
+  const CustomLeft = ({ onClick }) => (
+    <button className="arrow left" onClick={onClick}>
+      <FiChevronLeft style={{ fontSize: "50px" }} />
+    </button>
+  );
+
   return (
     <div className="discover">
       <h1>
         Discover more. <span>Good things are waiting for you</span>
       </h1>
-      <div className="discover__wrapper">
-        <div className="discover__item">
-          <Carousel responsive={responsive}>
-            <div className="discover__item__list">
+
+      <Carousel
+        swipeable={true}
+        draggable={true}
+        showDots={false}
+        arrows={true}
+        autoPlay={true}
+        responsive={responsive}
+        infinite={false}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        itemClass="space"
+        renderButtonGroupOutside={true}
+        customRightArrow={<CustomRight />}
+        customLeftArrow={<CustomLeft />}
+      >
+        {discover_list.map((items) => {
+          return (
+            <div
+              className="discover__item__list"
+              id={items.klass}
+              key={items.id}
+            >
               <div className="item__list__left">
-                <h4>Explore new arrivals</h4>
-                <h1>Shop the latest from top brands</h1>
-                <utton>Show me all</utton>
+                <h4>{items.heading}</h4>
+                <h1>{items.title}</h1>
+                <DefaultButton value="Show me all" />
               </div>
               <div className="item__list__right">
-                <img src="/images/discover/2.png" alt="" />
+                <img src={items.image} alt="" />
               </div>
             </div>
-            <div className="discover__item__list">
-              <div className="item__list__left">
-                <h4>Explore new arrivals</h4>
-                <h1>Shop the latest from top brands</h1>
-                <utton>Show me all</utton>
-              </div>
-              <div className="item__list__right">
-                <img src="/images/discover/2.png" alt="" />
-              </div>
-            </div>
-            <div className="discover__item__list">
-              <div className="item__list__left">
-                <h4>Explore new arrivals</h4>
-                <h1>Shop the latest from top brands</h1>
-                <utton>Show me all</utton>
-              </div>
-              <div className="item__list__right">
-                <img src="/images/discover/2.png" alt="" />
-              </div>
-            </div>
-            <div className="discover__item__list">
-              <div className="item__list__left">
-                <h4>Explore new arrivals</h4>
-                <h1>Shop the latest from top brands</h1>
-                <utton>Show me all</utton>
-              </div>
-              <div className="item__list__right">
-                <img src="/images/discover/2.png" alt="" />
-              </div>
-            </div>
-          </Carousel>
-        </div>
-      </div>
+          );
+        })}
+      </Carousel>
     </div>
   );
 };

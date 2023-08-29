@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -17,5 +19,14 @@ a {
   --cart-num-color: #0ea5e9;
   --mobile-bg: #f9f9f9;
   --large-button-bg: #0f172a;
+  --default-button-bg: #fff;
+  --default-button-bg-hover: #f3f4f6;
+  --default-button-text-color: #334155;
   --large-button-bg-hover: #1e293b;
+  --text-color: #111827;
+  --text-color-gray: #6b7280;
+  --font: Poppins;
+  --yellow-bg: #f3f1de;
+  --deep-yellow-bg: #f4e9e9;
+  --sky-bg: #eff6ff;
 }

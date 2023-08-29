@@ -1,7 +1,7 @@
 import Carousel from "nuka-carousel";
 import "./banner.css";
 import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
-import LargeButton from "../../reuse/button/large";
+import LargeButton from "../../reuse/button/large/darkBlue";
 
 import bg1 from "/images/banner/bg1.svg";
 import hero1 from "/images/banner/hero1.webp";
