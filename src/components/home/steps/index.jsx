@@ -28,11 +28,11 @@ const Steps = () => {
               <span>step 2</span>
             </div>
             <div className="step__title">
-              <h1>Filter & Discover</h1>
+              <h1>Add to bag</h1>
             </div>
             <div className="step__desc">
               <article>
-                Smart filtering and suggestions make it easy to find
+                Easily select the correct items and add them to the cart
               </article>
             </div>
           </div>
@@ -44,11 +44,11 @@ const Steps = () => {
               <span>step 3</span>
             </div>
             <div className="step__title">
-              <h1>Filter & Discover</h1>
+              <h1>Fast shipping</h1>
             </div>
             <div className="step__desc">
               <article>
-                Smart filtering and suggestions make it easy to find
+                The carrier will confirm and ship quickly to you
               </article>
             </div>
           </div>
@@ -60,12 +60,10 @@ const Steps = () => {
               <span>step 4</span>
             </div>
             <div className="step__title">
-              <h1>Filter & Discover</h1>
+              <h1>Enjoy the product</h1>
             </div>
             <div className="step__desc">
-              <article>
-                Smart filtering and suggestions make it easy to find
-              </article>
+              <article>Have fun and enjoy your 5-star quality products</article>
             </div>
           </div>
         </div>
