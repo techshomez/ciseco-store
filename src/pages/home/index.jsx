@@ -1,5 +1,6 @@
 import Banner from "../../components/home/banner";
 import Discover from "../../components/home/discover";
+import Steps from "../../components/home/steps";
 import ProductCard from "../../components/reuse/productCard";
 import "./home.css";
 
@@ -50,6 +51,7 @@ const HomePage = () => {
             image: "/images/product/5.png",
             desc: "Perfect mint green",
             price: "$42",
+            pro_type: "new",
             texture: [
               "/images/texture/1.jpg",
               "/images/texture/2.jpg",
@@ -94,6 +96,7 @@ const HomePage = () => {
           },
         ]}
       />
+      <Steps />
     </div>
   );
 };

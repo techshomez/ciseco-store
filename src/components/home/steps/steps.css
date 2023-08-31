@@ -1,0 +1,79 @@
+.steps {
+  padding: 1rem 5%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: var(--white);
+}
+
+.steps .wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+  background-image: url("../../../../public/images/vector_line.svg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  position: relative;
+  margin-top: 4rem;
+}
+
+.steps .wrapper .step__items {
+  width: 220px;
+  height: 342px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.steps .wrapper .step__items .step__lists {
+  position: absolute;
+  top: -0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.steps .wrapper .step__items .step__lists > img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.steps .wrapper .step__items .step__lists .step__badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 25px;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+
+.steps .wrapper .step__items .step__lists .step__badge > span {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: var(--font);
+}
+
+.step__bg__1 {
+  color: #991b1b;
+  background-color: var(--red-bg);
+}
+.step__bg__2 {
+  color: #6830a3;
+  background-color: var(--sky-bg);
+}
+.step__bg__3 {
+  color: #d79c37;
+  background-color: var(--light-yellow-bg);
+}
+.step__bg__4 {
+  color: #6830a3;
+  background-color: var(--light-purple-bg);
+}

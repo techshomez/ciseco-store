@@ -1,37 +1,53 @@
 import "./product_card.css";
 import { BsArrowLeft, BsArrowRight, BsHeart, BsStarFill } from "react-icons/bs";
-import { FiShoppingBag } from "react-icons/fi";
 import Slider from "react-slick";
 
 const ProductCard = ({ pro, heading, sub_heading }) => {
-  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <button
-      {...props}
-      className={
-        "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
-      }
-      aria-disabled={currentSlide === 0 ? true : false}
-      type="button"
-    >
-      Previous
-    </button>
-  );
-  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <button
-      {...props}
-      className={
-        "slick-next slick-arrow" +
-        (currentSlide === slideCount - 1 ? " slick-disabled" : "")
-      }
-      aria-disabled={currentSlide === slideCount - 1 ? true : false}
-      type="button"
-    >
-      Next
-    </button>
-  );
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          background: "#eff6ff",
+          borderRadius: "50px",
+          border: "none",
+          width: "30px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "30px",
+          color: "red",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          background: "#eff6ff",
+          borderRadius: "50px",
+          border: "none",
+          width: "30px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "30px",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
 
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     arrows: true,
@@ -64,8 +80,8 @@ const ProductCard = ({ pro, heading, sub_heading }) => {
         },
       },
     ],
-    prevArrow: <SlickArrowLeft />,
-    nextArrow: <SlickArrowRight />,
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
   };
 
   return (
