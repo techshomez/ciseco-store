@@ -1,5 +1,6 @@
 import "./product_card.css";
 import { BsArrowLeft, BsArrowRight, BsHeart, BsStarFill } from "react-icons/bs";
+import { FiShoppingBag } from "react-icons/fi";
 import Slider from "react-slick";
 
 const ProductCard = ({ pro, heading, sub_heading }) => {
@@ -36,18 +37,43 @@ const ProductCard = ({ pro, heading, sub_heading }) => {
     arrows: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
   };
 
   return (
     <div className="product__card">
-      <div className="card__title">
-        <h1>
-          {heading}
-          <span> {sub_heading}</span>
-        </h1>
-      </div>
+      <h1>
+        {heading}
+        <span> {sub_heading}</span>
+      </h1>
       <Slider {...settings}>
         {pro.map((card, index) => {
           return (
@@ -58,6 +84,10 @@ const ProductCard = ({ pro, heading, sub_heading }) => {
                   <i>
                     <BsHeart />
                   </i>
+                </div>
+                <div className="list__top__cta">
+                  <button>Add to bag</button>
+                  <button>Quick view</button>
                 </div>
               </div>
               <div className="item__list__bottom">
@@ -70,7 +100,7 @@ const ProductCard = ({ pro, heading, sub_heading }) => {
                   <h1>{card.title}</h1>
                   <span>{card.desc}</span>
                 </div>
-                <div className="card__bottom">
+                <div className="bottom__list">
                   <div className="price">
                     <span>{card.price}</span>
                   </div>
@@ -81,7 +111,7 @@ const ProductCard = ({ pro, heading, sub_heading }) => {
                       </i>
                       <span>{card.rating}</span>
                     </div>
-                    <div className="span">({card.review})</div>
+                    <span>({card.review})</span>
                   </div>
                 </div>
               </div>
