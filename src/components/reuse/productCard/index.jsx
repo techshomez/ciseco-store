@@ -3,13 +3,43 @@ import { BsArrowLeft, BsArrowRight, BsHeart, BsStarFill } from "react-icons/bs";
 import Slider from "react-slick";
 
 const ProductCard = ({ pro, heading, sub_heading }) => {
+  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <button
+      {...props}
+      className={
+        "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
+      }
+      aria-disabled={currentSlide === 0 ? true : false}
+      type="button"
+    >
+      Previous
+    </button>
+  );
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <button
+      {...props}
+      className={
+        "slick-next slick-arrow" +
+        (currentSlide === slideCount - 1 ? " slick-disabled" : "")
+      }
+      aria-disabled={currentSlide === slideCount - 1 ? true : false}
+      type="button"
+    >
+      Next
+    </button>
+  );
+
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    arrows: true,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
   };
+
   return (
     <div className="product__card">
       <div className="card__title">
@@ -18,7 +48,7 @@ const ProductCard = ({ pro, heading, sub_heading }) => {
           <span> {sub_heading}</span>
         </h1>
       </div>
-      <div className="wrapper">
+      <Slider {...settings}>
         {pro.map((card, index) => {
           return (
             <div className="card__items" key={index}>
@@ -30,9 +60,11 @@ const ProductCard = ({ pro, heading, sub_heading }) => {
                   </i>
                 </div>
               </div>
-              <div className="item__list__top">
+              <div className="item__list__bottom">
                 <div className="color">
-                  <img src="/images/texture/1.jpg" alt="" />
+                  {card.texture.map((item, i) => {
+                    return <img src={item} alt="" key={i} />;
+                  })}
                 </div>
                 <div className="item__info">
                   <h1>{card.title}</h1>
@@ -56,7 +88,7 @@ const ProductCard = ({ pro, heading, sub_heading }) => {
             </div>
           );
         })}
-      </div>
+      </Slider>
     </div>
   );
 };

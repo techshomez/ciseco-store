@@ -15,7 +15,7 @@ const HomePage = () => {
           {
             id: 1,
             title: "Leather Gloves",
-            image: "/images/product/1.png",
+            image: "/images/product/3.png",
             desc: "Perfect mint green",
             price: "$42",
             texture: [
@@ -31,7 +31,7 @@ const HomePage = () => {
           {
             id: 2,
             title: "Leather Gloves",
-            image: "/images/product/2.png",
+            image: "/images/product/4.png",
             desc: "Perfect mint green",
             price: "$42",
             texture: [
@@ -47,7 +47,7 @@ const HomePage = () => {
           {
             id: 3,
             title: "Leather Gloves",
-            image: "/images/product/3.png",
+            image: "/images/product/5.png",
             desc: "Perfect mint green",
             price: "$42",
             texture: [
@@ -63,7 +63,7 @@ const HomePage = () => {
           {
             id: 4,
             title: "Leather Gloves",
-            image: "/images/product/4.png",
+            image: "/images/product/6.png",
             desc: "Perfect mint green",
             price: "$42",
             texture: [
@@ -79,7 +79,7 @@ const HomePage = () => {
           {
             id: 5,
             title: "Leather Gloves",
-            image: "/images/product/5.png",
+            image: "/images/product/2.png",
             desc: "Perfect mint green",
             price: "$42",
             texture: [
