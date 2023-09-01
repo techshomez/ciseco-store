@@ -6,6 +6,7 @@
 }
 
 .steps > h1 {
+  position: relative;
   font-size: 36px;
   line-height: 40px;
   font-weight: 600;
@@ -14,8 +15,19 @@
   color: var(--text-color);
 }
 
+.steps > h1::before {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  width: 150px;
+  height: 3px;
+  overflow: hidden;
+  background-color: var(--light-purple-bg);
+}
+
 .steps .wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-around;
   align-items: center;
   gap: 3rem;
@@ -113,3 +125,5 @@
   text-align: center;
   color: var(--text-light-color);
 }
+
+/* Responsive */

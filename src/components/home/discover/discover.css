@@ -1,10 +1,10 @@
 .discover {
-  display: block;
   padding: 1rem 5%;
   padding-top: 7rem;
   padding-bottom: 7rem;
   background-color: var(--white);
-  gap: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .discover > h1 {
@@ -27,22 +27,6 @@
   margin-right: 3rem;
 }
 
-.arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  position: absolute;
-  top: 0;
-  color: var(--white);
-  right: 0;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 50px;
-  background-color: var(--large-button-bg);
-}
-
 #yellow-bg {
   background-color: var(--yellow-bg);
 }
@@ -60,15 +44,15 @@
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-  width: 446px;
-  height: 223;
+  width: 390px;
+  height: 223px;
   gap: 2rem;
   border-radius: 20px;
-  padding: 2rem;
-  margin-right: 2rem;
+  padding: 1.5rem;
 }
 
 .discover .discover__item__list .item__list__left {
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -83,14 +67,18 @@
 }
 
 .discover .discover__item__list .item__list__left > h1 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
   color: var(--large-button-bg);
   font-family: var(--font);
 }
+
+.discover .discover__item__list .item__list__right {
+  width: 50%;
+}
 .discover .discover__item__list .item__list__right > img {
-  width: 150px;
-  height: 110;
+  width: 130px;
+  height: 100%;
   object-fit: cover;
 }

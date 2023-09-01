@@ -1,8 +1,6 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Slider from "react-slick";
 import "./discover.css";
 import DefaultButton from "../../reuse/button/large/default";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const discover_list = [
   {
@@ -36,76 +34,110 @@ const discover_list = [
 ];
 
 const Discover = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          background: "#eff6ff",
+          borderRadius: "50px",
+          border: "none",
+          width: "30px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "30px",
+          color: "red",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          background: "#eff6ff",
+          borderRadius: "50px",
+          border: "none",
+          width: "30px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "30px",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    className: "center",
+    speed: 500,
+    arrows: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
   };
-
-  const CustomRight = ({ onClick }) => (
-    <button className="arrow right" onClick={onClick}>
-      <FiChevronRight style={{ fontSize: "50px" }} />
-    </button>
-  );
-  const CustomLeft = ({ onClick }) => (
-    <button className="arrow left" onClick={onClick}>
-      <FiChevronLeft style={{ fontSize: "50px" }} />
-    </button>
-  );
-
   return (
     <div className="discover">
       <h1>
         Discover more. <span>Good things are waiting for you</span>
       </h1>
-
-      <Carousel
-        swipeable={true}
-        draggable={true}
-        showDots={false}
-        arrows={true}
-        autoPlay={true}
-        responsive={responsive}
-        infinite={false}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        itemClass="space"
-        renderButtonGroupOutside={true}
-        customRightArrow={<CustomRight />}
-        customLeftArrow={<CustomLeft />}
-      >
-        {discover_list.map((items) => {
+      <Slider {...settings}>
+        {discover_list.map((items, i) => {
           return (
-            <div
-              className="discover__item__list"
-              id={items.klass}
-              key={items.id}
-            >
-              <div className="item__list__left">
-                <h4>{items.heading}</h4>
-                <h1>{items.title}</h1>
-                <DefaultButton value="Show me all" />
+            <>
+              <div className="discover__item__list" id={items.klass} key={i}>
+                <div className="item__list__left">
+                  <h4>{items.heading}</h4>
+                  <h1>{items.title}</h1>
+                  <DefaultButton value="Show me all" />
+                </div>
+                <div className="item__list__right">
+                  <img src={items.image} alt="" />
+                </div>
               </div>
-              <div className="item__list__right">
-                <img src={items.image} alt="" />
-              </div>
-            </div>
+            </>
           );
         })}
-      </Carousel>
+      </Slider>
     </div>
   );
 };
