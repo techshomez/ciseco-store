@@ -1,0 +1,54 @@
+.earn {
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--default-button-bg-hover);
+}
+
+.earn .earn__left {
+  width: 50%;
+}
+
+.earn .earn__left > img {
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+}
+
+.earn .earn__left > h1 {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 600;
+  color: var(--text-color);
+  font-family: var(--font);
+  padding-top: 3rem;
+}
+
+.earn .earn__left > article {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-color-gray);
+  font-family: var(--font);
+  margin-top: 1.7rem;
+}
+
+.earn .earn__left .earn__cta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.earn .earn__right {
+  width: 50%;
+}
+
+.earn .earn__right > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
