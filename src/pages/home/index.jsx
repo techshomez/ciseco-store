@@ -1,6 +1,7 @@
 import Banner from "../../components/home/banner";
 import Discover from "../../components/home/discover";
 import Steps from "../../components/home/steps";
+import Earn from "../../components/reuse/earnCiseco";
 import ProductCard from "../../components/reuse/productCard";
 import "./home.css";
 
@@ -97,6 +98,7 @@ const HomePage = () => {
         ]}
       />
       <Steps />
+      <Earn />
     </div>
   );
 };

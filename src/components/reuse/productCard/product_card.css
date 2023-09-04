@@ -24,7 +24,7 @@
 .product__card .card__items {
   width: 310px;
   height: 502;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   margin-bottom: 4rem;
 }
 
@@ -88,6 +88,7 @@
     align-items: center;
     gap: 0.5rem;
     background-color: transparent;
+    transition: all 1s ease;
   }
 
   .list__top__cta > button:first-child {
