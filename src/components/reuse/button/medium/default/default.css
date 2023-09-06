@@ -20,8 +20,7 @@
 
 @media (max-width: 477px) {
   .default {
-    margin: 0 auto;
-    width: 200px;
+    width: 160px;
     height: 55px;
     border: none;
     border-radius: 50px;
