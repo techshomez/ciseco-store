@@ -1,6 +1,6 @@
-.large {
+.dark__medium {
   width: 200px;
-  height: 60px;
+  height: 53px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -8,17 +8,18 @@
   line-height: 24px;
   font-weight: 500;
   overflow: hidden;
-  box-shadow: 2px 4px 5px var(--large-button-bg);
   color: var(--white);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
   background-color: var(--large-button-bg);
 }
 
-.large:hover {
+.dark__medium:hover {
   background-color: var(--large-button-bg-hover);
 }
 
 @media (max-width: 477px) {
-  .large {
+  .dark__medium {
     margin: 0 auto;
     width: 200px;
     height: 60px;
@@ -29,7 +30,6 @@
     line-height: 24px;
     font-weight: 500;
     overflow: hidden;
-    box-shadow: 0px 4px 8px var(--large-button-bg);
     color: var(--white);
     background-color: var(--large-button-bg);
   }

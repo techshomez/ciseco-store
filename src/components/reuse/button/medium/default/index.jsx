@@ -1,7 +1,7 @@
 import "./default.css";
 
-const DefaultButton = ({ value }) => {
+const DefaultMediumButton = ({ value }) => {
   return <button className="default">{value}</button>;
 };
 
-export default DefaultButton;
+export default DefaultMediumButton;
