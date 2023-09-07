@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import "./explore.css";
 import { BsArrowRight } from "react-icons/bs";
+import ExploreTab from "./tab";
 const Explore = () => {
   return (
     <div className="explore">
       <h1>Start exploring.</h1>
+      <ExploreTab />
       <div className="explore__wrapper">
         <div className="explore__item">
           <div className="item__top">
