@@ -5,40 +5,42 @@ const ExploreTab = () => {
   return (
     <div className="tab">
       <div className="tab__item">
-        <i>
-          <BsGenderFemale />
-        </i>
-        <span>Woman</span>
-      </div>
-      <div className="tab__item">
-        <i>
-          <BsGenderFemale />
-        </i>
-        <span>Woman</span>
-      </div>
-      <div className="tab__item">
-        <i>
-          <BsGenderFemale />
-        </i>
-        <span>Woman</span>
-      </div>
-      <div className="tab__item">
-        <i>
-          <BsGenderFemale />
-        </i>
-        <span>Woman</span>
-      </div>
-      <div className="tab__item">
-        <i>
-          <BsGenderFemale />
-        </i>
-        <span>Woman</span>
-      </div>
-      <div className="tab__item">
-        <i>
-          <BsGenderFemale />
-        </i>
-        <span>Woman</span>
+        <div className="tab__item__list">
+          <i>
+            <BsGenderFemale />
+          </i>
+          <span>Woman</span>
+        </div>
+        <div className="tab__item__list">
+          <i>
+            <BsGenderFemale />
+          </i>
+          <span>Woman</span>
+        </div>
+        <div className="tab__item__list tab__active">
+          <i>
+            <BsGenderFemale />
+          </i>
+          <span>Woman</span>
+        </div>
+        <div className="tab__item__list">
+          <i>
+            <BsGenderFemale />
+          </i>
+          <span>Woman</span>
+        </div>
+        <div className="tab__item__list">
+          <i>
+            <BsGenderFemale />
+          </i>
+          <span>Woman</span>
+        </div>
+        <div className="tab__item__list">
+          <i>
+            <BsGenderFemale />
+          </i>
+          <span>Woman</span>
+        </div>
       </div>
     </div>
   );
