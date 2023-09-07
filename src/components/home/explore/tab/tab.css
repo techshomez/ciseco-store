@@ -4,7 +4,7 @@
   align-items: center;
   gap: 3rem;
   margin-top: 4rem;
-  width: 900px;
+  width: 800px;
   height: 60px;
   border-radius: 50px;
   background-color: #f9f9f9;
@@ -95,3 +95,5 @@
 .tab .tab__item .tab__item__list.tab__active:hover > span {
   color: var(--white);
 }
+
+/* Responsiveness */
